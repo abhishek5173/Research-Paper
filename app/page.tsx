@@ -124,6 +124,8 @@ export default function Home() {
           </div>
         </section>
 
+           <BadCLS />
+
         {/* Topic Distribution */}
         <section className="rounded-[28px] bg-white p-8 shadow-xl border border-slate-100">
           <div className="mb-6">
@@ -182,7 +184,7 @@ export default function Home() {
               </thead>
 
               <tbody>
-                {/* {papers.map((paper) => (
+                {papers.map((paper) => (
                   <tr
                     key={paper.id}
                     className="border-b hover:bg-slate-50 transition"
@@ -209,13 +211,13 @@ export default function Home() {
                       {paper.citations}
                     </td>
                   </tr>
-                ))} */}
+                ))}
               </tbody>
             </table>
           </div>
         </section>
       </div>
-      <BadCLS />
+   
     </div>
   );
 }
