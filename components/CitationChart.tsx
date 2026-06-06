@@ -34,6 +34,19 @@ const yearlyData = Object.values(
   }, {})
 );
 
+const formatNumber = (value: number) => {
+  if (value >= 1_000_000_000) {
+    return `${(value / 1_000_000_000).toFixed(1).replace(/\.0$/, "")}B`;
+  }
+  if (value >= 1_000_000) {
+    return `${(value / 1_000_000).toFixed(1).replace(/\.0$/, "")}M`;
+  }
+  if (value >= 1_000) {
+    return `${(value / 1_000).toFixed(1).replace(/\.0$/, "")}k`;
+  }
+  return value.toString();
+};
+
 export default function CitationChart() {
   return (
     <div className="border rounded-xl p-5">
@@ -47,8 +60,8 @@ export default function CitationChart() {
       >
         <LineChart data={yearlyData}>
           <XAxis dataKey="year" />
-          <YAxis />
-          <Tooltip />
+          <YAxis tickFormatter={formatNumber} />
+          <Tooltip formatter={(value) => formatNumber(Number(value))} />
           <Line dataKey="citations" />
         </LineChart>
       </ResponsiveContainer>

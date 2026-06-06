@@ -9,9 +9,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div className="flex">
-          <Sidebar />
-          <main className="flex-1 p-6">
+       <div className="min-h-screen bg-linear-to-br from-slate-100 via-white to-blue-50">
+          {/* <Sidebar /> */}
+          <main className="bg-white border shadow-sm p-6 hover:shadow-md transition">
             {children}
           </main>
         </div>

@@ -1,18 +1,17 @@
+"use client"
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Sidebar() {
+  const path = usePathname();
   return (
-    <aside className="w-64 min-h-screen border-r p-5">
-      <h1 className="font-bold text-2xl mb-8">
-        Research Portal
-      </h1>
+      <nav className="flex justify-evenly items-center text-xl   gap-4">
 
-      <nav className="flex flex-col gap-4">
-        <Link href="/">Dashboard</Link>
+         {path !== "/" && <Link href="/">Dashboard</Link>}
         <Link href="/papers">Papers</Link>
         <Link href="/authors">Authors</Link>
         <Link href="/trends">Trends</Link>
       </nav>
-    </aside>
   );
 }

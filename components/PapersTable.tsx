@@ -25,7 +25,7 @@ export default function PapersTable() {
   }
 
   return (
-    <>
+    <div className="px-3">
       <input
         className="border p-2 rounded mb-4 w-full"
         placeholder="Search papers..."
@@ -60,6 +60,6 @@ export default function PapersTable() {
           </tbody>
         </table>
       </div>
-    </>
+    </div>
   );
 }
