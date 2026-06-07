@@ -16,7 +16,7 @@ const topics = [
 
 const papers: Paper[] = [];
 
-for (let i = 1; i <= 20000; i++) {
+for (let i = 1; i <= 5000; i++) {
   papers.push({
     id: i,
     title: faker.company.catchPhrase(),

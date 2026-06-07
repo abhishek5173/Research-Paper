@@ -1,17 +1,19 @@
 import type { NextConfig } from "next";
+import bundleAnalyzer from "@next/bundle-analyzer";
 
-const nextConfig: NextConfig = {
-  /* config options here */
-};
-
-
-const withBundleAnalyzer =
-require("@next/bundle-analyzer")({
-  enabled:
-    process.env.ANALYZE === "true",
+const withBundleAnalyzer = bundleAnalyzer({
+  enabled: process.env.ANALYZE === "true",
 });
 
-module.exports =
-  withBundleAnalyzer({});
+const nextConfig: NextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+      },
+    ],
+  },
+};
 
-export default nextConfig;
+export default withBundleAnalyzer(nextConfig);

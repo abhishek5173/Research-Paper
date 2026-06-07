@@ -18,11 +18,11 @@ export default function PapersTable() {
   );
 
   // Intentionally expensive computation
-  const expensive: number[] = [];
+  // const expensive: number[] = [];
 
-  for (let i = 0; i < 1000000; i++) {
-    expensive.push(Math.sqrt(i));
-  }
+  // for (let i = 0; i < 1000000; i++) {
+  //   expensive.push(Math.sqrt(i));
+  // }
 
   return (
     <div className="px-3">
@@ -39,11 +39,11 @@ export default function PapersTable() {
         <table className="w-full">
           <thead>
             <tr>
-              <th>Title</th>
-              <th>Author</th>
-              <th>Topic</th>
-              <th>Year</th>
-              <th>Citations</th>
+              <th className="text-start">Title</th>
+              <th className="text-start">Author</th>
+              <th className="text-start">Topic</th>
+              <th className="text-start">Year</th>
+              <th className="text-start">Citations</th>
             </tr>
           </thead>
 

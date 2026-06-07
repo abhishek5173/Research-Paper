@@ -6,6 +6,7 @@ import papers from "@/data/papers.json";
 import BadCLS from "@/components/BadCls";
 import Link from "next/link";
 import Sidebar from "@/components/SideBar";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -215,6 +216,15 @@ export default function Home() {
               </tbody>
             </table>
           </div>
+
+           <div className="overflow-hidden rounded-3xl mt-6">
+   <img
+    src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=4000"
+    alt="Research"
+    className="w-full rounded-3xl"
+  />
+  </div>
+
         </section>
       </div>
    
